@@ -15,14 +15,14 @@ namespace IceCream.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Why Dragon Scoops?";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "We'd love to hear from you!";
 
             return View();
         }

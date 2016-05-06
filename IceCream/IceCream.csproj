@@ -128,6 +128,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ClubModelsController.cs" />
     <Compile Include="Controllers\ConeModelsController.cs" />
     <Compile Include="Controllers\CustomerModelsController.cs" />
     <Compile Include="Controllers\FlavorsModelsController.cs" />
@@ -136,6 +137,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ClubModel.cs" />
     <Compile Include="Models\ConeModel.cs" />
     <Compile Include="Models\CustomerModel.cs" />
     <Compile Include="Models\FlavorsModel.cs" />
@@ -146,6 +148,12 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\CustomNavbar.css" />
+    <Content Include="Content\Images\cones2.jpg" />
+    <Content Include="Content\Images\cones3.jpg" />
+    <Content Include="Content\Images\NaturalsParlour.jpg" />
+    <Content Include="Content\Images\nycterisa.jpg" />
+    <Content Include="Content\Images\pattern.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -198,6 +206,11 @@
     <Content Include="Views\ConeModels\Details.cshtml" />
     <Content Include="Views\ConeModels\Edit.cshtml" />
     <Content Include="Views\ConeModels\Index.cshtml" />
+    <Content Include="Views\ClubModels\Create.cshtml" />
+    <Content Include="Views\ClubModels\Delete.cshtml" />
+    <Content Include="Views\ClubModels\Details.cshtml" />
+    <Content Include="Views\ClubModels\Edit.cshtml" />
+    <Content Include="Views\ClubModels\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
