@@ -1,0 +1,41 @@
+﻿@model IEnumerable<IceCream.Models.ConeModel>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ConeStyleList)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ConeStyleList)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.ConeID }) |
+                @Html.ActionLink("Details", "Details", new { id=item.ConeID }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.ConeID })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

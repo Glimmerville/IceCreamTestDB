@@ -1,0 +1,57 @@
+﻿@model IEnumerable<IceCream.Models.FlavorToCustomerLink>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerLink.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FlavorLink.Flavor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sprinkles)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ToGo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ConeID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerLink.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FlavorLink.Flavor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sprinkles)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ToGo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ConeID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.FlavorToCustomerLinkID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.FlavorToCustomerLinkID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.FlavorToCustomerLinkID })
+        </td>
+    </tr>
+}
+
+</table>

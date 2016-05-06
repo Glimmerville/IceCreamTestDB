@@ -1,0 +1,58 @@
+﻿@model IceCream.Models.FlavorToCustomerLink
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>FlavorToCustomerLink</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomerLink.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomerLink.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FlavorLink.Flavor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FlavorLink.Flavor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sprinkles)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sprinkles)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ToGo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ToGo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ConeID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ConeID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.FlavorToCustomerLinkID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

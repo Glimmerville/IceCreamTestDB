@@ -1,0 +1,72 @@
+﻿@model IceCream.Models.FlavorsModel
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>FlavorsModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Flavor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Flavor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FlavorDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FlavorDesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LimtedEd)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LimtedEd)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentlyAvail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurrentlyAvail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BestSeller)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BestSeller)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContainsNuts)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContainsNuts)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,63 @@
+﻿@model IEnumerable<IceCream.Models.FlavorsModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Flavor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FlavorDesc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LimtedEd)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CurrentlyAvail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BestSeller)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContainsNuts)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Flavor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FlavorDesc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LimtedEd)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CurrentlyAvail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BestSeller)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContainsNuts)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.FlavorID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.FlavorID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.FlavorID })
+        </td>
+    </tr>
+}
+
+</table>
