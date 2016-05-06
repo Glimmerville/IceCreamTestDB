@@ -28,5 +28,7 @@ namespace IceCream.Models
         public System.Data.Entity.DbSet<IceCream.Models.ConeModel> ConeModels { get; set; }
 
         public System.Data.Entity.DbSet<IceCream.Models.ClubModel> ClubModels { get; set; }
+
+        public System.Data.Entity.DbSet<IceCream.Models.OrderModel> OrderModels { get; set; }
     }
 }

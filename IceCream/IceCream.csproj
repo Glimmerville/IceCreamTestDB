@@ -134,6 +134,7 @@
     <Compile Include="Controllers\FlavorsModelsController.cs" />
     <Compile Include="Controllers\FlavorToCustomerLinksController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OrderModelsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -143,17 +144,21 @@
     <Compile Include="Models\FlavorsModel.cs" />
     <Compile Include="Models\FlavorToCustomerLink.cs" />
     <Compile Include="Models\IceCreamContext.cs" />
+    <Compile Include="Models\OrderModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\CustomNavbar.css" />
+    <Content Include="Content\Images\Barons_Ice_Cream.jpg" />
     <Content Include="Content\Images\cones2.jpg" />
     <Content Include="Content\Images\cones3.jpg" />
     <Content Include="Content\Images\NaturalsParlour.jpg" />
     <Content Include="Content\Images\nycterisa.jpg" />
     <Content Include="Content\Images\pattern.jpg" />
+    <Content Include="Content\Images\raspberry.jpg" />
+    <Content Include="Content\Images\sixKindsIceCream.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -211,6 +216,11 @@
     <Content Include="Views\ClubModels\Details.cshtml" />
     <Content Include="Views\ClubModels\Edit.cshtml" />
     <Content Include="Views\ClubModels\Index.cshtml" />
+    <Content Include="Views\OrderModels\Create.cshtml" />
+    <Content Include="Views\OrderModels\Delete.cshtml" />
+    <Content Include="Views\OrderModels\Details.cshtml" />
+    <Content Include="Views\OrderModels\Edit.cshtml" />
+    <Content Include="Views\OrderModels\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
