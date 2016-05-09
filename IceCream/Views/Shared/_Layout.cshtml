@@ -1,15 +1,18 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <link href='https://fonts.googleapis.com/css?family=Sigmar+One' rel='stylesheet' type='text/css'>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Simply the Best!</title>
     @Styles.Render("~/Content/css")
         @Scripts.Render("~/bundles/modernizr")
         <link href="~/Content/CustomNavbar.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.11.3.min.js"></script>
+
 </head>
 <body style="background-color:#FFB6B2;">
-    <div class="navbar-default navbar-fixed-top navbar-brand rounded" style="padding-bottom: 5px; padding-top: 5px;">
+    <div class="navbar-default navbar-fixed-top navbar-brand rounded" style="padding-bottom: 0px; padding-top: 0px;">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -23,13 +26,13 @@
                
                 <ul class="nav navbar-nav" style="height: 45px;">
                         <li class="dropdown">
-                            <button class="btn btn-default navbar-btn dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" style="padding-top: 15px;">
+                            <button class="btn btn-default navbar-btn dropdown-toggle navDrop" type="button" id="menu1" data-toggle="dropdown" style="background-color: aqua; border: 0px;">
                                 Menu
                                 <span class="caret"></span>
                             </button>
                             <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
                                 <li role="presentation"><a role="menuitem" tabindex="-1" @Html.ActionLink("Flavors", "Index", "FlavorsModels")</li>
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Extras</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" @Html.ActionLink("Events", "Index", "ClubModels")</li>
                                 <li role="presentation"><a role="menuitem" tabindex="-1" @Html.ActionLink("About", "About", "Home")</li>
                                 <li role="presentation" class="divider"></li>
                                 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Newsletter</a></li>

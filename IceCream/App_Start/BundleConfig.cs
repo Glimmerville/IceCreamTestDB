@@ -20,11 +20,15 @@ namespace IceCream
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js",
+                      "~/Scripts/bootstrap.js", 
+                      "~/Scripts/moment.js",
+                      "~/Scripts/fullcalendar.js",
+                      "~/Scripts/jquery-ui-1.8.11.js",
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
+                      "~/Content/fullcalendar.css",
                       "~/Content/site.css"));
         }
     }

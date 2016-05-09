@@ -34,3 +34,15 @@ textarea {
     background-repeat: no-repeat;
     background-size: cover;
 }
+.dragonCone {
+    background-image: url('Images/nycterisa.jpg');
+    background-repeat: no-repeat;
+    max-height: 250px;
+    border-radius: 10px;
+}
+.navDrop {
+    margin-top: 0px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    background-color: aqua;
+}
