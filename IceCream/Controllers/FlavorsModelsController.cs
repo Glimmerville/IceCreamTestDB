@@ -15,10 +15,30 @@ namespace IceCream.Controllers
         private IceCreamContext db = new IceCreamContext();
 
         // GET: FlavorsModels
-        public ActionResult Index()
+        public ActionResult Index(string sortOrder)
         {
-            return View(db.FlavorsModels.ToList());
+            ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "flavor_desc" : "";
+            ViewBag.NutSortParm = sortOrder == "Limited" ? "LimtedEd" : "Limited";
+            var flavors = from s in db.FlavorsModels
+                          select s;
+            switch (sortOrder)
+            {
+                case "flavor_desc":
+                    flavors = flavors.OrderByDescending(s => s.Flavor);
+                    break;
+                case "Limited":
+                    flavors = flavors.OrderBy(s => s.LimtedEd);
+                    break;
+                default:
+                    flavors = flavors.OrderBy(s => s.BestSeller);
+                    break;
+
+            }
+            return View(flavors.ToList());
         }
+        //{
+        //    return View(db.FlavorsModels.ToList());
+        //}
 
         // GET: FlavorsModels/Details/5
         public ActionResult Details(int? id)

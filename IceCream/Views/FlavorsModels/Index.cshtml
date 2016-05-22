@@ -7,18 +7,20 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @*@Html.ActionLink("Create New", "Create") I don't want John Q public making up flavors.*@
 </p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Flavor)
+            @Html.ActionLink("Flavor", "Index", new { sortOrder = ViewBag.NameSortParm })
+            @*@Html.DisplayNameFor(model => model.Flavor)*@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.FlavorDesc)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.LimtedEd)
+            @*@Html.DisplayNameFor(model => model.LimtedEd)*@
+            @Html.ActionLink("Available", "Index", new { sortOrder = ViewBag.DateSortParm })
         </th>
         <th>
             @Html.DisplayNameFor(model => model.CurrentlyAvail)
@@ -53,9 +55,9 @@
             @Html.DisplayFor(modelItem => item.ContainsNuts)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.FlavorID }) |
+            @*@Html.ActionLink("Edit", "Edit", new { id=item.FlavorID }) |
             @Html.ActionLink("Details", "Details", new { id=item.FlavorID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.FlavorID })
+            @Html.ActionLink("Delete", "Delete", new { id=item.FlavorID })*@
         </td>
     </tr>
 }

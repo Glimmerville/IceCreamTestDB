@@ -15,7 +15,7 @@
 
 </head>
 <body style="background-color:#FFB6B2;">
-    <div class="navbar-default navbar-fixed-top navbar-brand rounded" style="padding-bottom: 0px; padding-top: 0px;">
+    <div class="navbar-default navbar-fixed-top navbar-brand " style="padding-bottom: 0px; padding-top: 0px;">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -29,7 +29,7 @@
                
                 <ul class="nav navbar-nav" >
                         <li class="dropdown">
-                            <button class="btn btn-default navbar-btn dropdown-toggle navDrop" type="button" id="menu1" data-toggle="dropdown" style="background-color: aqua; border: 0px;">
+                            <button class="btn btn-default navbar-btn dropdown-toggle navDrop" type="button" data-toggle="dropdown" style="background-color: aqua; border: 0px; margin-top: 10px;">
                                 Menu
                                 <span class="caret"></span>
                             </button>
@@ -41,10 +41,10 @@
                                 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Newsletter</a></li>*@
                             </ul>
                         </li>
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Order Online", "Index", "OrderModels")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Sign Up", "Create", "CustomerModels", new { area = "" }, new { @class = "btn btn-default navbar-btn bright fixed" })</li>
+                    <li style="margin-top: 10px;">@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li style="margin-top: 10px;">@Html.ActionLink("Events", "Index", "ClubModels")</li>
+                    <li style="margin-top: 10px;">@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Sign Up", "Create", "CustomerModels", new { area = "" }, new { @class = "btn btn-default navbar-btn fixed" })</li>
                 </ul>
                </div>
             </div>
