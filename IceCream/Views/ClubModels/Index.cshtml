@@ -14,8 +14,10 @@
     <script src="~/Scripts/moment.js"></script>
     <script src="~/Scripts/jquery-ui-1.8.11.js"></script>
     <script src="~/Scripts/fullcalendar.js"></script>
-    <link href="~/Content/CustomNavbar.css" rel="stylesheet" />
-
+    @*<link href="~/Content/CustomNavbar.css" rel="stylesheet" />*@
+    <link href="~/Content/themes/base/jquery.ui.base.css" rel="stylesheet" />
+    <link href="~/Content/themes/base/jquery.ui.theme.css" rel="stylesheet" />
+    <link href="~/Content/themes/base/jquery.ui.all.css" rel="stylesheet" />
     <script>
 
         $(document).ready(function () {
@@ -27,8 +29,18 @@
                     right: 'next'
                 },
                 defaultView: 'month',
-                editable: false,
-                events: "/ClubModels/GetEvents/"
+                editable: true,
+                events: [
+            {
+                title: 'Smith Birthday',
+                start: '2016-05-28'
+            },
+            {
+                title: 'L. Baby Shower',
+                start: '2016-05-27'
+            }
+            // etc...
+                ]
             });
         });
        
@@ -39,5 +51,5 @@
 
 <body>
     <h2>Calendar of Events</h2>
-    <div id="calendar" style="width:65%"></div>
+    <div id="calendar" style="align-content: center;"></div>
 </body>

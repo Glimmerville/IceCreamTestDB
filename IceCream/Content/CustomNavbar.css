@@ -1,6 +1,6 @@
 ﻿
 .navbar-default {
-  background-color: aqua;
+  background-color: #3276b1;
   border-color: #d9aea9;
 }
 .navbar-default .navbar-brand {
@@ -55,7 +55,7 @@
 
 @media (max-width: 767px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-    color: #ecf0f1;
+    color: #ecf0f1; 
   }
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {

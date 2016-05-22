@@ -7,7 +7,10 @@
     <title>@ViewBag.Title - Simply the Best!</title>
     @Styles.Render("~/Content/css")
         @Scripts.Render("~/bundles/modernizr")
-        <link href="~/Content/CustomNavbar.css" rel="stylesheet" />
+        @*<link href="~/Content/CustomNavbar.css" rel="stylesheet" />*@
+    <link href="~/Content/themes/base/jquery.ui.base.css" rel="stylesheet" />
+    <link href="~/Content/themes/base/jquery.ui.theme.css" rel="stylesheet" />
+    <link href="~/Content/themes/base/jquery.ui.all.css" rel="stylesheet" />
     <script src="~/Scripts/jquery-1.11.3.min.js"></script>
 
 </head>
@@ -24,7 +27,7 @@
                 @*@Html.ActionLink("Dragon Scoops", "Index", "ClubModels", new { area = "" }, new { @class = "navbar-brand" })*@
             <div class="navbar-collapse collapse">
                
-                <ul class="nav navbar-nav" style="height: 45px;">
+                <ul class="nav navbar-nav" >
                         <li class="dropdown">
                             <button class="btn btn-default navbar-btn dropdown-toggle navDrop" type="button" id="menu1" data-toggle="dropdown" style="background-color: aqua; border: 0px;">
                                 Menu
@@ -34,8 +37,8 @@
                                 <li role="presentation"><a role="menuitem" tabindex="-1" @Html.ActionLink("Flavors", "Index", "FlavorsModels")</li>
                                 <li role="presentation"><a role="menuitem" tabindex="-1" @Html.ActionLink("Events", "Index", "ClubModels")</li>
                                 <li role="presentation"><a role="menuitem" tabindex="-1" @Html.ActionLink("About", "About", "Home")</li>
-                                <li role="presentation" class="divider"></li>
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Newsletter</a></li>
+                                @*<li role="presentation" class="divider"></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Newsletter</a></li>*@
                             </ul>
                         </li>
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
