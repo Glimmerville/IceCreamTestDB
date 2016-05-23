@@ -5,7 +5,7 @@
 }
 
 @*<h2>Sign Up</h2>*@
-<h3>Sign up to receive our Newsletter!</h3> 
+<h3 class="scoopFont">Sign up to receive our Newsletter!</h3> 
 <p>Get coupons, special offers, and a free scoop on your birthday!</p><br>
 
 @using (Html.BeginForm()) 
@@ -15,7 +15,7 @@
     <div class="form-horizontal" >
 
         <hr />
-        <h4>Sign Up:</h4>
+        <h4 class="scoopFont">Sign Up:</h4>
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
          
         <div class="form-group">

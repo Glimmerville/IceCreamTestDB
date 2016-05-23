@@ -18,7 +18,7 @@ namespace IceCream.Controllers
         public ActionResult Index(string sortOrder)
         {
             ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "flavor_desc" : "";
-            ViewBag.NutSortParm = sortOrder == "Limited" ? "LimtedEd" : "Limited";
+           // ViewBag.NutSortParm = sortOrder == "Limited" ? "LimtedEd" : "Limited";
             var flavors = from s in db.FlavorsModels
                           select s;
             switch (sortOrder)
@@ -26,9 +26,9 @@ namespace IceCream.Controllers
                 case "flavor_desc":
                     flavors = flavors.OrderByDescending(s => s.Flavor);
                     break;
-                case "Limited":
-                    flavors = flavors.OrderBy(s => s.LimtedEd);
-                    break;
+                //case "Limited":
+                //    flavors = flavors.OrderBy(s => s.LimtedEd);
+                //    break;
                 default:
                     flavors = flavors.OrderBy(s => s.BestSeller);
                     break;

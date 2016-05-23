@@ -1,11 +1,13 @@
 ﻿@model IEnumerable<IceCream.Models.FlavorsModel>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Flavors";
 }
 
-<h2>Index</h2>
 
+<link href="~/Content/Site.css" rel="stylesheet" />
+<h2 class="scoopFont">Our Flavors</h2>
+<p>Our flavor list is always changing!</p>
 <p>
     @*@Html.ActionLink("Create New", "Create") I don't want John Q public making up flavors.*@
 </p>
@@ -19,8 +21,8 @@
             @Html.DisplayNameFor(model => model.FlavorDesc)
         </th>
         <th>
-            @*@Html.DisplayNameFor(model => model.LimtedEd)*@
-            @Html.ActionLink("Available", "Index", new { sortOrder = ViewBag.DateSortParm })
+            @Html.DisplayNameFor(model => model.LimtedEd)
+            @*@Html.ActionLink("Available", "Index", new { sortOrder = ViewBag.DateSortParm })*@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.CurrentlyAvail)
